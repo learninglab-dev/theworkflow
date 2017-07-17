@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+    <link rel='stylesheet' href='/css/person.css' />
+  </head>
+  <body id="<%= pageID %>">
+    <header>
+    <% include partials/template/header.ejs %>
+    </header>
+    <h1><%= siteTitle %>--<%= pageTitle %></h1>
+    <div class="person_image">
+      testing
+        <%- image_embed %>
+        <p>
+          is that an image?
+        </p>
+    </div>
+
+
+    <div class="container">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Ellen Jang-Milsten",
+    "Role": "LLUF",
+    "Department": "Philosophy",
+    "Graduation_Year": 2018,
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/34824877673/in/album-72157682810720584/\" title=\"20170622_004_Week1_SyllabusTestBroll_5Da_014_12531003.jpg\"><img src=\"https://farm5.staticflickr.com/4238/34824877673_3c564335f1_k.jpg\" width=\"2048\" height=\"1152\" alt=\"20170622_004_Week1_SyllabusTestBroll_5Da_014_12531003.jpg\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  },
+  {
+    "Name": "Geoffrey Binney",
+    "Role": "LLUF",
+    "Department": "English",
+    "Graduation_Year": 2017,
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/34824868543/in/album-72157682810720584/\" title=\"20170621_003_LLUF_VideoWorkshop_C100a_001_14240601.jpg\"><img src=\"https://farm5.staticflickr.com/4123/34824868543_b9585879e1_k.jpg\" width=\"2048\" height=\"1152\" alt=\"20170621_003_LLUF_VideoWorkshop_C100a_001_14240601.jpg\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  },
+  {
+    "Name": "Harrison Satcher",
+    "Role": "LLUF",
+    "Department": "Psychology",
+    "Graduation_Year": 2019,
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/34824873803/in/album-72157682810720584/\" title=\"20170621_003_LLUF_VideoWorkshop_C100a_001_14365715.jpg\"><img src=\"https://farm5.staticflickr.com/4049/34824873803_0070f66f66_k.jpg\" width=\"2048\" height=\"1152\" alt=\"20170621_003_LLUF_VideoWorkshop_C100a_001_14365715.jpg\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  },
+  {
+    "Name": "Marlon Kuzmick",
+    "Role": "Director of the Learning Lab",
+    "Department": "Bok Center",
+    "Graduation_Year": "NA",
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/35798831136/\" title=\"20170707_002_Week3_GreenScreenTest_C300a_001_10044905.jpg\"><img src=\"https://farm5.staticflickr.com/4209/35798831136_530162da0c_h.jpg\" width=\"1600\" height=\"900\" alt=\"20170707_002_Week3_GreenScreenTest_C300a_001_10044905.jpg\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  },
+  {
+    "Name": "Jennifer Roberts",
+    "Role": "Faculty",
+    "Department": "History of Art and Architecture",
+    "Graduation_Year": "NA",
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/29301823212/in/album-72157680792429830/\" title=\"Untitled\"><img src=\"https://farm9.staticflickr.com/8259/29301823212_b45b74c904_h.jpg\" width=\"1600\" height=\"900\" alt=\"Untitled\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  },
+  {
+    "Name": "Averill Corkin",
+    "Role": "LLMF",
+    "Department": "HGSE",
+    "Graduation_Year": 2017,
+    "Image": "<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/boklearninglab/30455428770/in/album-72157674318912261/\" title=\"20161025_005_MLVF_Averill_C300a_001_16325514.jpg\"><img src=\"https://farm6.staticflickr.com/5484/30455428770_d64fd128f1_h.jpg\" width=\"1600\" height=\"900\" alt=\"20161025_005_MLVF_Averill_C300a_001_16325514.jpg\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>"
+  }
+]
