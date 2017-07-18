@@ -1,12 +1,24 @@
 var express = require('express');
 var router = express.Router();
+//
+// router.get('/', function(req, res){
+//   res.render('index', {
+//     pageTitle: 'index',
+//     pageID: 'home',
+//   });
+// });
 
 router.get('/', function(req, res){
-  res.render('index', {
-    pageTitle: 'index',
-    pageID: 'home',
-  });
+  // res.send('Hello')
+  // mdb.collection('slack_20170715').find().toArray((err, result) => {
+  //   if (err) return console.log(err)
+    res.render('index', {
+      // slackdata: result,
+      pageTitle: 'index', pageID:'home'})
+  // })
 });
+
+
 
 router.get('/bootstrap-index', function(req, res){
   res.render('bootstrap-index', {

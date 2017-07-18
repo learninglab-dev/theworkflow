@@ -57,11 +57,11 @@ router.post('/slack_20170715', (req, res) => {
   res.json(data);
 });
 
-router.locals.siteTitle = 'slack app tests';
+// router.locals.siteTitle = 'slack app tests';
 
-router.use(express.static('./public'));
+// router.use(express.static('./public'));
 // app.use(require('./routes/index'));
-router.use(require('./routes/form'));
+// router.use(require('./routes/form'));
 
 router.get('/', function(req, res){
   // res.send('Hello')
@@ -219,4 +219,4 @@ router.post('/marker-button', urlencodedParser, (req, res) =>{
     });
 })
 
-console.log('it is working');
+module.exports = router;
