@@ -5,7 +5,13 @@ var slackStats = require('./app/data/slackStats.json');
 var shoots_2017_06 = require('./app/data/2017_06_shoots.json');
 var people_data_file = require('./app/data/people.json');
 var bodyParser = require('body-parser');
-
+const MongoClient = require('mongodb').MongoClient;
+const request = require('request');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.set('port', process.env.PORT || 3000);
 var port = process.env.PORT || 3000;
@@ -25,6 +31,7 @@ app.use(require('./app/routes/three_routes'));
 app.use(require('./app/routes/shoot'));
 app.use(require('./app/routes/people'));
 app.use(require('./app/routes/form'));
+app.use(require('./app/routes/slack'));
 
 
 app.get('/index2', function (req, res) {
