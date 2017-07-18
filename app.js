@@ -231,12 +231,13 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
     console.log('response_url from actionJSONPayload:');
     console.log(actionJSONPayload.response_url);
     sendMessageToSlackResponseURL(actionJSONPayload.response_url, message)
-    mdb.collection('button-presses').save(req.body, function(err, result){
+    mdb.collection('button-presses').save(actionJSONPayload, function(err, result){
        if (err) return console.log(err)
        else {
          console.log('saved to the database');
        }
     });
+
 })
 
 console.log('it is working');
