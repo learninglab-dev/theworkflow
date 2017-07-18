@@ -8,6 +8,21 @@ router.get('/', function(req, res){
   });
 });
 
+router.get('/bootstrap-index', function(req, res){
+  res.render('bootstrap-index', {
+    pageTitle: 'bootstrap-index',
+    pageID: 'bootstrap-index',
+  });
+});
+
+router.get('/layout', function(req, res){
+  res.render('layout', {
+    pageTitle: 'layout',
+    pageID: 'layout',
+  });
+});
+
+
 module.exports = router;
 
 

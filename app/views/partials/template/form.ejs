@@ -4,6 +4,9 @@
     <% include ../../partials/template/head.ejs %>
   </head>
   <body id="<%= pageID %>">
+    <header class="clearfix" style="height: 80vh; background: url(/images/crayons.jpg) no-repeat center center; background-size: cover; margin-bottom: 30px;
+      background-attachment:fixed;">
+    </header>
 
     <div class="container">
       <div class="row">
@@ -35,7 +38,96 @@
         </aside><!-- secondary -->
       </div>
     </div><!-- container -->
+    <div class="container">
+      <div class="display-1 text-uppercase text-center" style="background: rgba(255,0,0,.5); color: white; border-radius:20px; padding:20px; margin-bottom:20px; font-family:Avenir; font-size:70px; font-weight:900">
+        <span class="strut" style="display: inline-block; height: 68px"></span>
+        EDITING FORM
+      </div>
+      <section class="project-heading">
+        <h1>ins and outs go here</h1>
+        <div class="row">
+          <div class="col-md-6 offset-3">
+            <p>
+              Music professor Emily Dolan is co-leading a graduate seminar with a colleague of hers, Jonathan Stern (Professor of Culture and Technology at McGill University in Montreal, Quebec). Seminars met in parallel on each campus, connecting via video conference for group disussions every other week. Two in-person meetings also took place, with each group of students visiting the opposite campus during their spring break. The Bok Center met several times with Dolan in the fall, providing support for the technological requirements (by purchasing and supporting equipment that HUIT was unable to furnish) and developing various models for conducting a large humanities seminar via video conference. We also consulted with music department staff about renovations to their seminar room, which took place in January.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p>
+              Music professor Emily Dolan is co-leading a graduate seminar with a colleague of hers, Jonathan Stern (Professor of Culture and Technology at McGill University in Montreal, Quebec). Seminars met in parallel on each campus, connecting via video conference for group disussions every other week. Two in-person meetings also took place, with each group of students visiting the opposite campus during their spring break. The Bok Center met several times with Dolan in the fall, providing support for the technological ic department staff about renovations to their seminar room, which took place in January.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p>
+              Music professor Emily Dolan is co-leading a graduate seminar with a colleague of hers, Jonathan Stern (Professor of Culture and Technology at McGill University in Montreal, Quebec). Seminars met in parallel on each campus, connecting via video conference for group disussions every
+              s every other week. Two in-person meetings also took place, with each group of students visiting the opposite campus during their spring break. The Bok Center met several times with Dolan in other week. Two in-person meetings also took place, with each group of students visiting the opposite campus during their spring break. The Bok Center met several times with Dolan in the fall, providing support for the technological requirements (by purchasing and supporting equipment that HUIT was unable to furnish) and developing various models for conducting a large humanities seminar via video conference. We also consulted with music department staff about renovations to their seminar room, which took place in January.
+            </p>
+          </div>
+          <p>
+            Music professor Emily Dolan is co-leading a graduate seminar with a colleague of hers, Jonathan Stern (Professor of Culture and Technology at McGill University in Montreal, Quebec). Seminars met in parallel on each campus, connecting via video conference for group disussions every other week. Two in-person meetings also took place, with each group of students visiting the opposite campus during their spring break. The Bok Center met several times with Dolan in the fall, providing support for the technological requirements (by purchasing and supporting equipment that HUIT was unable to furnish) and developing various models for conducting a large humanities seminar via video conference. We also consulted with music department staff about renovations to their seminar room, which took place in January.
+          </p>
+        </div>
 
+      </section>
+
+            <form action="/the-action" method="post">
+              <!--  Project Name: <input class="longString" type="text" name="projectName" style="width: 100px;" value=""> -->
+                <h4>Multiclip ID: </h4></br>
+                <div class="center">
+                <select name="multiclipId">
+                  <option value="1">one</option>
+                  <option value="2">two</option>
+                  <option value="20161216_003">20161216_003_LL_Movement_JJIVMK</option>
+                  <option value="20161216_004">20161216_004_LLUF_AC_Alain</option>
+                  <option value="20161219_001">20161219_001_Holiday_Recipes_VMMO</option>
+                  <option value="20161219_002">20161219_002_LL_Movement_Wong_IV</option>
+                  <option value="20161219_003">20161219_003_Timelapse_Talk_MKCK</option>
+                  <option value="other">None of the above</option>
+                </select>
+                </div>
+            </br></br>in:
+              <input type="text" name="inHour" pattern="[0-2]{1}[0-9]{1}" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="inMinute" min="0" max="59" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="inSecond" min="0" max="59" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="inFrame" min="0" max="23" maxlength="2" style="width: 25px;">
+            &nbsp; &nbsp; &nbsp; out:
+              <input type="text" name="outHour" min="0" max="23" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="outMinute" min="0" max="59" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="outSecond" min="0" max="59" maxlength="2" style="width: 25px;"><span class="form-001">:</span>
+              <input type="text" name="outFrame" min="0" max="23" maxlength="2" style="width: 25px; margin-right:0px;">
+              &nbsp; &nbsp; &nbsp; &nbsp;</br></br></br>
+          <input type="submit" name="submit_inOut" value="submit" class="submitButton" />
+        </form>
+
+        <img src="../images/music-vis.jpg" class="img-fluid rounded" />
+
+        <div class="row fixed-bottom">
+          <div class="col-4 text-center rounded" style="background-color: rgba(255,100,0,0.5)">
+            <a href="/bootstrap-index">
+              <h5 class="text-white">INDEX</h5>
+            </a>
+          </div>
+          <div class="col-4 text-center rounded" style="background-color: rgba(255,0,180,0.5)">
+            <a href="/form">
+              <h5 class="text-white">FORM</h5>
+            </a>
+          </div>
+          <div class="col-4 text-center rounded" style="background-color: rgba(0,100,180,0.4)">
+            <a href="/layout">
+              <h5 class="text-white">LAYOUT</h5>
+            </a>
+          </div>
+
+
+        </div><!-- row -->
+    </div><!-- container -->
+
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    </body>
+    </html>
 
   </body>
 </html>

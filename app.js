@@ -4,9 +4,12 @@ var in_out_file = require('./app/data/in_out.json');
 var slackStats = require('./app/data/slackStats.json');
 var shoots_2017_06 = require('./app/data/2017_06_shoots.json');
 var people_data_file = require('./app/data/people.json');
+var bodyParser = require('body-parser');
+
 
 app.set('port', process.env.PORT || 3000);
 var port = process.env.PORT || 3000;
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('in_out_data', in_out_file);
 app.set('people_data', people_data_file);
 app.set('shoot_data_2017_06', shoots_2017_06);
@@ -29,6 +32,22 @@ app.get('/index2', function (req, res) {
     <h1>index2 in here</h1>
     `);
 })
+
+app.post('/myaction', (req, res) => {
+  console.log("got a req");
+  console.log(JSON.stringify(req.body));
+  res.send('You sent the object ' + JSON.stringify(req.body))
+});
+
+
+app.post('/the-action', (req, res) => {
+  console.log("got a req");
+  console.log(JSON.stringify(req.body));
+  // res.send('You sent the object ' + JSON.stringify(req.body))
+  res.redirect('/bootstrap-index');
+});
+
+
 
 // var server = app.listen(app.get('port'), function(){
 //   console.log(`listening on port ${app.get('port')} . . .`);
