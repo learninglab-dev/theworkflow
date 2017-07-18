@@ -180,33 +180,37 @@ app.post('/slack-marker', urlencodedParser, (req, res) =>{
         res.status(403).end("Access forbidden")
     }else{
         var message = {
-            "text": "This is your first interactive message",
-            "attachments": [
+            "text": "This slash command will log a request for an \"in\" point to the server", "attachments": [
                 {
-                    "text": "Building buttons is easy right?",
+                    "text": "can you guess how long ago the magic moment started?",
                     "fallback": "Shame... buttons aren't supported in this land",
-                    "callback_id": "button_tutorial",
+                    "callback_id": "theworkflow_marker_button",
                     "color": "#3AA3E3",
                     "attachment_type": "default",
                     "actions": [
                         {
-                            "name": "yes",
-                            "text": "yes",
+                            "name": "5-min",
+                            "text": "5 minutes ago",
                             "type": "button",
-                            "value": "yes"
+                            "value": "300"
                         },
                         {
-                            "name": "no",
-                            "text": "no",
+                            "name": "2-min",
+                            "text": "2 minutes ago",
                             "type": "button",
-                            "value": "no"
+                            "value": "120"
                         },
                         {
-                            "name": "maybe",
-                            "text": "maybe",
+                            "name": "60-sec",
+                            "text": "60 seconds ago",
                             "type": "button",
-                            "value": "maybe",
-                            "style": "danger"
+                            "value": "60",
+                        },
+                        {
+                            "name": "30-sec",
+                            "text": "30 seconds ago",
+                            "type": "button",
+                            "value": "30",
                         }
                     ]
                 }
