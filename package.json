@@ -25,6 +25,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "moment": "^2.18.1",
     "mongodb": "^2.2.30",
+    "mongoose": "^4.11.3",
     "request": "^2.81.0"
   }
 }
