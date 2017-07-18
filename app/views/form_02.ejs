@@ -16,20 +16,23 @@
     FORM 02
   </div>
 
-  <form>
+  <form action="/form_02_response" method="post">
     <fieldset class="form-group">
       <legend>
         Shoot Info
       </legend>
       <div>
         <label for="thedate">Date</label>
-        <input type="date" id="thedate" />
+        <input type="date" name="thedate" />
       </div>
+
       <legend>
         Person Info
       </legend>
     </fieldset>
-
+    <div>
+      <input type="submit" value="Submit"/>
+    </div>
   </form>
 
   </div>

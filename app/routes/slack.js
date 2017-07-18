@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
-
+const bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 function sendMessageToSlackResponseURL(responseURL, JSONmessage){
     var postOptions = {
