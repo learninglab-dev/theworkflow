@@ -10,5 +10,12 @@ router.get('/form', function(req, res){
   });
 });
 
+router.get('/form_02', function(req, res) {
+  res.render('form_02', {
+    pageTitle: 'form 2',
+    pageID: 'form 2',
+    testVar: 'test string for form 2'
+  });
+});
 
 module.exports = router;
