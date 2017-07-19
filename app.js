@@ -48,7 +48,7 @@ app.use(require('./app/routes/ins_outs'));
 app.use(require('./app/routes/three_routes'));
 app.use(require('./app/routes/shoot'));
 app.use(require('./app/routes/people'));
-app.use(require('./app/routes/form'));
+app.use(require('./app/routes/forms'));
 // app.use(require('./app/routes/slack-app'));
 
 
