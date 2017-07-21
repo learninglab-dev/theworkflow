@@ -276,12 +276,12 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
         "text": actionJSONPayload.user.name+" clicked: "+actionJSONPayload.actions[0].name,
         "replace_original": false
     }
-    // var marker = require('./models/marker');
-    // var new_marker = new marker({payload: actionJSONPayload});
-    // new_marker.save(function (err){
-    //   if (err) console.log(err);
-    // });
-    res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(person_001));
+    var marker = require('./models/marker');
+    var new_marker = new marker({payload: actionJSONPayload});
+    new_marker.save(function (err){
+      if (err) console.log(err);
+    });
+    res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(new_marker));
     console.log('is this the full name? \n' + marker.payload.user.name);
     console.log('response_url from actionJSONPayload:');
     console.log(actionJSONPayload.response_url);
