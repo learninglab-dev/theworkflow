@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+  <body>
+    <header class="clearfix" style="height: 50vh; background: url(/images/textbook-lego.jpg) no-repeat center center; background-size: cover; margin-bottom: 30px; background-attachment: fixed">
+    </header>
+    <div class="container">
+      <div class="display-1 text-uppercase text-center" style="background: rgba(255,0,0,.5); color: white; border-radius:20px; padding:20px; margin-bottom:20px; font-family:Avenir; font-size:70px; font-weight:900">
+        <span class="strut" style="display: inline-block; height: 68px"></span>
+        the workflow
+      </div>
+      <div class="row">
+          <div class="col-3" style="padding-left: 0; padding-right: 0;">
+              <img src="/images/cards.jpg" class="img-fluid rounded" />
+          </div>
+            <div class="col-3" style="background-color: rgba(255,0,20,0.5)">
+              <a href="/index">
+                <h3>index</h3>
+                </a>
+            </div>
+          <div class="col-3 rounded" style="background-color: rgba(25,0,200,0.5)">
+            <a href="/layout">
+              <div class="text-center" style="background-image: url(/images/Transparent.gif); width: 100%; height: 100%; color: white">
+              <span class="align-middle">
+                LAYOUT</br>
+                TESTS
+              </span>
+
+              </div>
+            </a>
+          </div>
+          <div class="col-3" style="background-color: rgba(0,255,30,0.2)">
+            3
+          </div>
+          <div class="col-6 offset-sm-3" style="padding-left: 0; padding-right: 0;">
+            <section class="image-section">
+              <img src="/images/crayons.jpg" class="img-fluid rounded" />
+            </section>
+          </div>
+          <div class="col-3" style="background-color: rgba(0,100,255,0.5)">
+            4
+          </div>
+          <div class="col-9">
+            <section class="image-section">
+              <img src="/images/music-vis.jpg" class="img-fluid rounded" />
+            </section>
+          </div>
+          <div class="col-6" style="background-color: rgba(255,200,0,0.5)">
+            5
+          </div>
+          <div class="col-3" style="background-color: rgba(255,100,0,0.5)">
+            6
+          </div>
+          <div class="col-3" style="background-color: rgba(255,0,180,0.5)">
+            7
+          </div>
+          <div class="col-4" style="background-color: rgba(255,200,0,0.5)">
+            8
+          </div>
+      </div>
+
+      <div class="row fixed-bottom">
+        <div class="col-4 text-center rounded" style="background-color: rgba(255,100,0,0.5)">
+          <a href="/bootstrap-index">
+            <h5 class="text-white">INDEX</h5>
+          </a>
+        </div>
+        <div class="col-4 text-center rounded" style="background-color: rgba(255,0,180,0.5)">
+          <a href="/form">
+            <h5 class="text-white">FORM</h5>
+          </a>
+        </div>
+        <div class="col-4 text-center rounded" style="background-color: rgba(0,100,180,0.4)">
+          <a href="/layout">
+            <h5 class="text-white">LAYOUT</h5>
+          </a>
+        </div>
+
+
+      </div><!-- row -->
+
+    <ul>
+      <% include partials/content/portfolio-links.ejs %>
+    </ul>
+
+    </div><!-- container -->
+    <% include partials/template/foot.ejs %>
+  </body>
+</html>

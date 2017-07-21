@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
-var in_out_file = require('./data/in_out.json');
-var slackStats = require('./data/slackStats.json');
-var shoots_2017_06 = require('./data/2017_06_shoots.json');
-var people_data_file = require('./data/people.json');
+var in_out_file = require('./app/data/in_out.json');
+var slackStats = require('./app/data/slackStats.json');
+var shoots_2017_06 = require('./app/data/2017_06_shoots.json');
+var people_data_file = require('./app/data/people.json');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -289,5 +289,3 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
 })
 
 console.log('it is working');
-
-module.exports = app;
