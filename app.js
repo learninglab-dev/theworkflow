@@ -71,11 +71,11 @@ app.use('/three_routes', three_routes);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+// app.use(function(req, res, next) {
+//   var err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
 
 
 var mongodbUri = process.env.DB_URL;
@@ -93,7 +93,7 @@ var SegmentSchema = new mongoose.Schema({
 
 var Segment = mongoose.model('Segment', SegmentSchema);
 
-var Segment_0001 = new Segment({shoot_id: '20170719_001_Test_Test'});
+var Segment_0001 = new Segment({shoot_id: '20170721_001_Test_Test'});
 
 Segment_0001.save(function (err){
   if (err) return handleError(err);
@@ -134,11 +134,11 @@ app.post('/slack_20170715', (req, res) => {
   attachments:[ {image_url: 'https://media.giphy.com/media/vooluv4uvvi8g/giphy.gif'} ]
             };
   req.body.timestamp = thisTime;
-  var marker = require('./models/marker');
-  var new_marker = new marker({payload: req.body});
-  new_marker.save(function (err){
-    if (err) console.log(err);
-  });
+  // var marker = require('./models/marker');
+  // var new_marker = new marker({payload: req.body});
+  // new_marker.save(function (err){
+  //   if (err) console.log(err);
+  // });
   res.json(data);
 });
 
@@ -276,11 +276,11 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
         "text": actionJSONPayload.user.name+" clicked: "+actionJSONPayload.actions[0].name,
         "replace_original": false
     }
-    var marker = require('./models/marker');
-    var new_marker = new marker({payload: actionJSONPayload});
-    new_marker.save(function (err){
-      if (err) console.log(err);
-    });
+    // var marker = require('./models/marker');
+    // var new_marker = new marker({payload: actionJSONPayload});
+    // new_marker.save(function (err){
+    //   if (err) console.log(err);
+    // });
     res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(person_001));
     console.log('is this the full name? \n' + marker.payload.user.name);
     console.log('response_url from actionJSONPayload:');
