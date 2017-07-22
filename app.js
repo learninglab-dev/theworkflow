@@ -281,7 +281,7 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
     new_marker.save(function (err){
       if (err) console.log(err);
     });
-    res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(new_marker));
+    // res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(new_marker));
     console.log('is this the full name? \n' + marker.payload.user.name);
     console.log('response_url from actionJSONPayload:');
     console.log(actionJSONPayload.response_url);
