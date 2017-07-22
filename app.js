@@ -134,11 +134,11 @@ app.post('/slack_20170715', (req, res) => {
   attachments:[ {image_url: 'https://media.giphy.com/media/vooluv4uvvi8g/giphy.gif'} ]
             };
   req.body.timestamp = thisTime;
-  // var marker = require('./models/marker');
-  // var new_marker = new marker({payload: req.body});
-  // new_marker.save(function (err){
-  //   if (err) console.log(err);
-  // });
+  var marker = require('./models/marker');
+  var new_marker = new marker({payload: req.body});
+  new_marker.save(function (err){
+    if (err) console.log(err);
+  });
   res.json(data);
 });
 
@@ -282,7 +282,7 @@ app.post('/marker-button', urlencodedParser, (req, res) =>{
       if (err) console.log(err);
     });
     // res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(new_marker));
-    console.log('is this the full name? \n' + marker.payload.user.name);
+    console.log('is this the full name? \n' + new_marker.payload.user.name);
     console.log('response_url from actionJSONPayload:');
     console.log(actionJSONPayload.response_url);
     sendMessageToSlackResponseURL(actionJSONPayload.response_url, message);
