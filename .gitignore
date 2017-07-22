@@ -4,8 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 app/public/video/
-_ignore/
-_ignore/*/
+_ignore*
 
 # Runtime data
 pids
