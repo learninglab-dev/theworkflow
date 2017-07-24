@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include partials/template/head.ejs %>
+</head>
+<body>
+  <header class="clearfix" style="height: 30vh; background: url(/images/notebook.jpg) no-repeat center center; background-size: cover; margin-bottom: 30px; background-attachment: fixed">
+  </header>
+<div class="container">
+  <div class="display-1 text-uppercase text-center" style="background: rgba(50,40,150,.5); color: white; border-radius:20px; padding:20px; margin-bottom:20px; font-family:Avenir; font-size:70px; font-weight:900">
+    <span class="strut" style="display: inline-block; height: 68px"></span>
+    INS AND OUTS
+  </div>
+
+  <form action="/in_out" method="post">
+    <fieldset class="form-group">
+      <legend>
+        IN POINT (PUSH)
+      </legend>
+      <div>
+        <label for="in_tc">Date</label>
+        <input type="submit" name="in_tc" value="in" />
+      </div>
+
+      <legend>
+        Person Info
+      </legend>
+    </fieldset>
+    <div>
+      <input type="submit" value="Submit"/>
+    </div>
+  </form>
+
+
+  </div>
+
+
+<script src="lib/jquery-3.2.1.min.js"></script>
+<script src="lib/tether.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/scripts.js"></script>
+</body>
+</html>

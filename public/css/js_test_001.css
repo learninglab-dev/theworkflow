@@ -1,0 +1,60 @@
+h3 {
+  font-family: Futura;
+  font-size: 30px;
+  font-weight: 900;
+  margin: auto;
+  text-align: center;
+}
+
+#in_button {
+  width: 20%;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  float: left;
+}
+
+#out_button {
+  width: 20%;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  float: left;
+}
+
+@keyframes red2blue {
+    from {background-color: rgba(220, 0, 20, 0.8);}
+    to {background-color: rgba(0, 20, 70, 0.7);}
+}
+
+@keyframes black2blue {
+    from {background-color: rgba(10, 20, 0, 0.8);}
+    to {background-color: rgba(0, 20, 70, 0.7);}
+}
+
+@keyframes blue2red {
+    from {background-color: rgba(0, 20, 70, 0.7);}
+    to {background-color: rgba(220, 0, 20, 0.8);}
+}
+
+.start_red {
+  background-color: rgba(220, 0, 20, 0.8);
+}
+
+.start_black {
+  background-color: rgba(10, 20, 0, 0.8);
+}
+
+.red {
+  background-color: rgba(220, 0, 20, 0.8);
+  animation-name: blue2red;
+  animation-duration: .5s;
+}
+
+.blue {
+  background-color: rgba(0, 20, 70, 0.7);
+  animation-name: black2blue;
+  animation-duration: .5s;
+}

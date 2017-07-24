@@ -12,25 +12,27 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var http = require('http');
 const request = require('request');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const dotenv = require('dotenv');
-dotenv.config();
-// var mongoose = require('mongoose');
 
-app.set('port', process.env.PORT || 3000);
-// var port = process.env.PORT || 3000;
-app.set('in_out_data', in_out_file);
-app.set('people_data', people_data_file);
-app.set('shoot_data_2017_06', shoots_2017_06);
-app.set('view engine', 'ejs');
-// app.set('views', 'app/views');
-app.set('views', path.join(__dirname, 'views'));
+
+dotenv.config();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('port', process.env.PORT || 3000);
+app.set('in_out_data', in_out_file);
+app.set('people_data', people_data_file);
+app.set('shoot_data_2017_06', shoots_2017_06);
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.locals.siteTitle = 'theworkflow';
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -40,22 +42,9 @@ var ins_outs = require('./routes/ins_outs');
 var people = require('./routes/people');
 var shoot = require('./routes/shoot');
 var three_routes = require('./routes/three_routes');
+var in_out = require('./routes/in_out');
+var js_tests = require('./routes/js_tests');
 
-// var server = app.listen(port, function(){
-//   console.log("App running on port " + port);
-// });
-//
-// let mdb;
-// MongoClient.connect(process.env.DB_URL, (err, db) => {
-//   if (err) return console.log(err)
-//   mdb = db
-//   app.listen(port, function() {
-//     console.log('Mongo connected and listening on ' + port);
-//   });
-//   // ... start the server
-// });
-
-app.locals.siteTitle = 'theworkflow';
 
 app.use('/', index);
 app.use('/users', users);
@@ -66,6 +55,8 @@ app.use('/ins_outs', ins_outs);
 app.use('/people', people);
 app.use('/shoot', shoot);
 app.use('/three_routes', three_routes);
+app.use('/in_out', in_out);
+app.use('/js_tests', js_tests);
 // app.use(require('./app/routes/slack-app'));
 
 
@@ -83,37 +74,11 @@ mongoose.connect(mongodbUri);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-var SegmentSchema = new mongoose.Schema({
-  request_timestamp : String,
-  in_offset : String,
-  in_point :  String,
-  shoot_id :  String,
-  updated : { type: Date, default: Date.now}
-});
-
-var Segment = mongoose.model('Segment', SegmentSchema);
-
-var Segment_0001 = new Segment({shoot_id: '20170721_001_Test_Test'});
-
-Segment_0001.save(function (err){
-  if (err) return handleError(err);
-});
-
-
-
-
-app.get('/index2', function (req, res) {
-  res.send(`
-    <h1>index2 in here</h1>
-    `);
-})
-
 app.post('/myaction', (req, res) => {
   console.log("got a req");
   console.log(JSON.stringify(req.body));
   res.send('You sent the object ' + JSON.stringify(req.body))
 });
-
 
 app.post('/the-action', (req, res) => {
   console.log("got a req");

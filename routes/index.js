@@ -3,10 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home for l_express', pageID: 'home' });
+  res.render('index', { title: 'The Workflow', pageID: 'home' });
 });
-
-
 
 router.get('/bootstrap-index', function(req, res){
   res.render('bootstrap-index', {
