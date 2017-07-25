@@ -3,18 +3,28 @@ const OUT_BUTTON = document.querySelector("#out_button");
 inButtonText = IN_BUTTON.querySelector("h3");
 IN_BUTTON.style.cursor = "pointer";
 OUT_BUTTON.style.cursor = "pointer";
+const TIMER = document.querySelector("#timer");
 
+var date = new Date();
+var hr = date.getHours();
+var min = date.getMinutes();
+var sec = date.getSeconds();
 
 function setInPoint (e) {
   e.preventDefault();
   IN_BUTTON.classList.toggle("red");
   IN_BUTTON.classList.toggle("blue");
   var date = Date.now();
+  runTimer(date);
   console.log("in button pushed at " + Date.now());
   var xhr = new XMLHttpRequest();
   xhr.open("POST", '/in_out', true);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify({ in_point: date, text: "test text" }));
+}
+
+function runTimer (date) {
+
 }
 
 function setOutPoint (e) {

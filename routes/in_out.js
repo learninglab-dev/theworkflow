@@ -18,19 +18,20 @@ router.post('/', function(req, res, next) {
   if(typeof req.body.in_point !== "undefined")
   {
     console.log("New in point at " + JSON.stringify(req.body.in_point));
+    var this_moment = new moment({shoot_id: "20170725_001_Test_Shoot", in_tc: req.body.in_point});
+    this_moment.save(function (err){
+      if (err) console.log(err);
+    });
   }
   if(typeof req.body.out_point !== "undefined")
   {
     console.log("New out point at " + req.body.out_point);
+    var this_moment = new moment({shoot_id: "20170725_001_Test_Shoot", out_tc: req.body.out_point});
+    this_moment.save(function (err){
+      if (err) console.log(err);
+    });
   }
 
-  // var this_moment = new moment({shoot_id: req.body.shoot_id, in_ts: req.body.last_name, out: req.body.thedate});
-  // person_001.save(function (err){
-  //   if (err) console.log(err);
-  // });
-  // res.send(JSON.stringify(req.body) + 'was the full object and this is the person: ' + JSON.stringify(person_001));
-  // console.log('is this the full name? \n' + person_001.name);
-  res.redirect("/in_out");
 });
 
 module.exports = router;

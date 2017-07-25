@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var momentSchema = new Schema({
-    shoot_id  : Schema.Types.ObjectId,
+    shoot_id  : String,
     in_tc : String,
     out_tc : String,
     duration: Number,

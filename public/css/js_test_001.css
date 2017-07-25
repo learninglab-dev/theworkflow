@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(20, 20, 30, 0.9);
+}
+
 h3 {
   font-family: Futura;
   font-size: 30px;
@@ -23,6 +27,13 @@ h3 {
   padding: 20px;
   float: left;
 }
+
+#timer {
+  width: 40%;
+  margin: auto;
+  
+}
+
 
 @keyframes red2blue {
     from {background-color: rgba(220, 0, 20, 0.8);}
